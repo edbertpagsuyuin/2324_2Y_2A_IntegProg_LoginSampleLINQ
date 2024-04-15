@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800" Closed="Window_Closed" Closing="Window_Closing">
     <Grid>
-        
+        <Button x:Name="ChangeName" Content="Change Name" HorizontalAlignment="Left" Margin="216,212,0,0" VerticalAlignment="Top" Height="45" Width="145" Click="ChangeName_Click"/>
+        <Button x:Name="NewUser" Content="Register" HorizontalAlignment="Left" Margin="438,212,0,0" VerticalAlignment="Top" Height="45" Width="145"/>
+        <Label x:Name="LblMessage" Content="Label" HorizontalAlignment="Center" Margin="0,95,0,0" VerticalAlignment="Top" Height="91" Width="485" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="NewName" HorizontalAlignment="Left" Margin="320,181,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="269" Height="26" VerticalContentAlignment="Center" TextChanged="NewName_TextChanged" Visibility="Hidden"/>
+        <Label x:Name="lblname" Content="New User Name:" HorizontalAlignment="Left" Margin="216,181,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Button x:Name="back" Content="Back" HorizontalAlignment="Center" Margin="0,262,0,0" VerticalAlignment="Top" Height="38" Width="286" Click="back_Click" Visibility="Hidden"/>
+        <Button x:Name="confirm" Content="Confirm" HorizontalAlignment="Center" Margin="0,216,0,0" VerticalAlignment="Top" Height="38" Width="286" Click="back_Click" RenderTransformOrigin="0.225,-0.419" Visibility="Hidden"/>
+
+
     </Grid>
 </Window>

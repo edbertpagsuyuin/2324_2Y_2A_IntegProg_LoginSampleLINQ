@@ -259,6 +259,8 @@ namespace _2324_2Y_2A_IntegProg_LoginSampleLINQ
 		
 		private System.DateTime _TimeStamp;
 		
+		private string _LogCounterpart;
+		
 		private EntityRef<LoginUser> _LoginUser;
 		
     #region Extensibility Method Definitions
@@ -271,6 +273,8 @@ namespace _2324_2Y_2A_IntegProg_LoginSampleLINQ
     partial void OnLoginIDChanged();
     partial void OnTimeStampChanging(System.DateTime value);
     partial void OnTimeStampChanged();
+    partial void OnLogCounterpartChanging(string value);
+    partial void OnLogCounterpartChanged();
     #endregion
 		
 		public Log()
@@ -339,6 +343,26 @@ namespace _2324_2Y_2A_IntegProg_LoginSampleLINQ
 					this._TimeStamp = value;
 					this.SendPropertyChanged("TimeStamp");
 					this.OnTimeStampChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LogCounterpart", DbType="NVarChar(50)")]
+		public string LogCounterpart
+		{
+			get
+			{
+				return this._LogCounterpart;
+			}
+			set
+			{
+				if ((this._LogCounterpart != value))
+				{
+					this.OnLogCounterpartChanging(value);
+					this.SendPropertyChanging();
+					this._LogCounterpart = value;
+					this.SendPropertyChanged("LogCounterpart");
+					this.OnLogCounterpartChanged();
 				}
 			}
 		}

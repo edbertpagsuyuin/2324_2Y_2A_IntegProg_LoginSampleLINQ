@@ -59,6 +59,7 @@ namespace _2324_2Y_2A_IntegProg_LoginSampleLINQ
                             Log log = new Log();
                             log.LoginID = login.LoginID;
                             log.TimeStamp = cDT;
+                            log.LogCounterpart = "Login";
 
                             _lsDC.Logs.InsertOnSubmit(log);
                             _lsDC.SubmitChanges();
@@ -69,8 +70,7 @@ namespace _2324_2Y_2A_IntegProg_LoginSampleLINQ
 
                 if(loginFlag)
                 {
-                    MessageBox.Show($"Login success! Welcome back {userName}!");
-                    Window1 w1 = new Window1();
+                    Window1 w1 = new Window1(userName);
                     w1.Show();
                     this.Close();
                 }
